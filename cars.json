@@ -1,2 +1,21 @@
+{ 
+"cars" : [
 
-{"car1":"BWM", "car2":"Volvo", "car3": "Lambo"}
+{
+    "brand": "Toyota",
+    "model": "Cake",
+    "year": "1993"
+},
+{
+    "brand": "Volvo",
+    "model": "V70",
+    "year": "1999"
+},
+{
+    "brand": "BWM",
+    "model": "E30",
+    "year": "1996"
+}
+
+]
+}

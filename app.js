@@ -11,7 +11,7 @@ const anka = new XMLHttpRequest ();
         anka.send();
 
 
-LoadCars = () => {carsList.hidden = false};
+
        
 header.onload = () => {
        
@@ -25,7 +25,20 @@ header.onload = () => {
         }
         };
 
+LoadCars = () => {
+    var UlList = document.getElementById('carList');
+    UlList.innerHTML ='';
+    var carInfo = JSON.parse(anka.responseText);
+
+    carInfo.cars.forEach(cars => {
+        var ListofCars = document.createElement('li')
+        ListofCars.innerHTML = (`${cars.brand} ${cars.model }${cars.year}`)
+        UlList.appendChild(ListofCars)
         
+    });
+
+}
+ /*       
 anka.onload = () => {
     var cars = JSON.parse(anka.responseText);
     var list = document.createElement("ul");
@@ -38,5 +51,7 @@ anka.onload = () => {
             }
             
         }
+*/
+        
        
        
